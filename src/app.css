@@ -275,7 +275,7 @@ body {
   padding: 10px 12px 6px;
   opacity: 1;
   margin: auto -4px 100px -4px;
-  font-size: calc(min(450px,50dvw)*0.005 + 0.02dvw + 0.05rem);
+  font-size: calc(min(800px,100dvw)*0.005 + 0.02dvw + 0.05rem);
   height: 48px;
   text-align:center;
 }
@@ -294,7 +294,7 @@ body {
   border-radius: 8px;
   margin-right: -4px;
   margin-left: -4px;
-  font-size: calc(min(440px,40dvw)*0.005 + 0.02dvw + 0.05rem);
+  font-size: calc(min(1000px,80dvw)*0.005 + 0.02dvw + 0.05rem);
 }
 .blog-post h3{
   left: 0px;
