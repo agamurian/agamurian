@@ -47,45 +47,7 @@
 						<a href="/">LinkedIn</a><br/>
 					</p>
 				</div>
-				<div class="card" style="background-image: url('/back6.webp'); background-position: center; background-size:auto;">
-					<h3 class="header" >
-						Projects
-					</h3>
-					<hr>
-					<p class="keyed">
-						<a href='/'><b>Vivian Del Rio</b></a><br/>
-						personal website<br/>
-					</p>
-					<p class="keyed">
-						<a href='/'><b>Simage</b></a><br/>
-						image processing program<br/>
-					</p>
-					<p class="keyed">
-						<a href='/'><b>3D XR player</b></a><br/>
-						for ...<br/>
-					</p>
-				</div>
 			</div>
-	</section>
-	<section class="section-fullsize shaded" style="" >
-	<section class="section">
-		<div class="text-block" style="mix-blend-mode: screen">
-			<br/>
-			<h1 class="header">
-				Who am I, exactly:
-			</h1>
-			<br/>
-			<br/>
-			<p style="font-family: CMU-nrm;">
-				I am a sowtware developer in multi-discliplinary realm, i do <nobr style="color:yellow">programs for artists</nobr>, expirement with modern and hot technologies, work with the frontiers<br/><br/>
-				I respect good technical rigor, aestectics and quality.
-				My Expirience lies in both frontend, gui programs, backend and even full systems.<br/><br/>
-				As an media artist myself, i also sometimes produce nice-looking pictures and artistic projects.
-			<br/>
-			</p>
-			<br/>
-		</div>
-	</section>
 	</section>
 	{#if (false) }
 	<section class="section">

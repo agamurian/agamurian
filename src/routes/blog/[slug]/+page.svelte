@@ -16,7 +16,7 @@
 	<meta property="og:title" content={data.meta.title} />
 	<meta property="og:description" content={data.meta.excerpt} />
 	<meta property="og:type" content="article" />
-	<meta property="og:image" content={data.meta.image || '/og-image.jpg'} />
+	<meta property="og:image" content={data.meta.image || '/og-image.png'} />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
