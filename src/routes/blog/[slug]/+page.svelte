@@ -71,19 +71,15 @@
 <style>
 
 	.blog-header {
-	transition: 0.8s ease-out;
-		display: flex;
-		flex-direction: column;
 		margin: -2px -4px 0px -4px;
 		padding: 4px 15px 15px 15px;
 		border-radius: 4px;
 		background-color: var(--color-bg);
-		align-content: end;
-		backdrop-filter: blur(10px);
 		position: sticky;
 		margin-top:-20px;
 		top: 33px;
 		z-index: 1;
+		font-size: small;
 	}
 
 	.header {
@@ -128,26 +124,6 @@
 	.blog-content {
 		line-height: 1.8;
 		margin-bottom: 60px;
-	}
-
-	:global(.blog-content h1) {
-		font-size: 2.2rem;
-		margin: 40px 0 20px 0;
-		line-height: 1.3;
-		margin-bottom: 4rem;
-	}
-
-	:global(.blog-content h2) {
-		font-size: 1.9rem;
-		margin: 35px 0 15px 0;
-		line-height: 1.3;
-		border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-		padding-bottom: 10px;
-	}
-
-	:global(.blog-content h3) {
-		font-size: 1.5rem;
-		margin: 25px 0 12px 0;
 	}
 
 	:global(.blog-content p) {
@@ -261,21 +237,10 @@
 		text-align: right;
 	}
 
-	:global(h1) {
-		font-size-adjust: ic-height;
-	}
 
 	@media (max-width: 600px) {
 		.post-navigation {
 			grid-template-columns: 1fr;
-		}
-
-		:global(.blog-content h1) {
-			font-size: 1.8rem;
-		}
-
-		:global(.blog-content h2) {
-			font-size: 1.5rem;
 		}
 
 		.blog-meta {

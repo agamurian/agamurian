@@ -294,7 +294,6 @@ body {
   border-radius: 8px;
   margin-right: -4px;
   margin-left: -4px;
-  font-size: calc(min(1000px,80dvw)*0.005 + 0.02dvw + 0.05rem);
 }
 .blog-post h3{
   left: 0px;
@@ -311,7 +310,6 @@ body {
   margin-left:auto;
   height: 40px;
   border-radius: 8px;
-  font-size: calc(min(950px,90dvw)*0.005 + 0.05dvw + 0.05rem);
 }
 .blog-post pre code{
   font-family: "Inconsolata";
@@ -375,30 +373,6 @@ body {
 
   font-family: 'CMU-ui';
   font-family: 'CMU-nrm';
-}
-
-h1 {
-  font-size: 3.0rem;
-}
-
-h2 {
-  font-size: 2.2rem;
-}
-
-h3 {
-  font-size: 1.9rem;
-}
-
-h4 {
-  font-size: 1.7rem;
-}
-
-h5 {
-  font-size: 1.5rem;
-}
-
-h6 {
-  font-size: 1rem;
 }
 
 hr {
