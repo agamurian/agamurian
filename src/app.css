@@ -289,7 +289,7 @@ body {
   color: var(--color-text);
   padding: 8px;
   background-color: var(--color-bg);
-  font-size: 1.2rem;
+  font-size: 1em;
   height: 47px;
   padding-top: 12px;
   border-radius: 8px;
@@ -306,11 +306,10 @@ body {
   color: var(--color-text);
   padding: 8px;
   background-color: var(--color-bg);
-  font-size: 1rem;
+  font-size: 0.9em;
   width:fit-content;
   max-width:max-content;
   padding-right: auto;
-  padding-left: calc(5 * (min(950px,90dvw)*0.015 - 0.15dvw + 0.25rem));
   align-self: end;
   margin-left:auto;
   height: 40px;
