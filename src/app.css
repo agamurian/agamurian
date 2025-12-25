@@ -276,7 +276,7 @@ body {
   opacity: 1;
   margin: auto -4px 100px -4px;
   font-size: calc(min(950px,90dvw)*0.025 + 0.15dvw + 0.15rem);
-  font-size: 1.2rem;
+  font-size: 1em - 1vw;
   height: 48px;
   text-align:center;
 }
@@ -289,7 +289,7 @@ body {
   color: var(--color-text);
   padding: 8px;
   background-color: var(--color-bg);
-  font-size: 1em;
+  font-size: 1em - 1vw;
   height: 47px;
   padding-top: 12px;
   border-radius: 8px;
@@ -307,6 +307,7 @@ body {
   padding: 8px;
   background-color: var(--color-bg);
   font-size: 0.9em;
+  font-size: 1em - 1vw;
   width:fit-content;
   max-width:max-content;
   padding-right: auto;
