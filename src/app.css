@@ -276,10 +276,8 @@ body {
   opacity: 1;
   margin: auto -4px 100px -4px;
   font-size: calc(min(950px,90dvw)*0.025 + 0.15dvw + 0.15rem);
-  font-size: 1em - 1vw;
   height: 48px;
   text-align:center;
-  font-size: calc(1rem - 2vw);
 }
 .blog-post h2{
   position: sticky;
@@ -290,14 +288,13 @@ body {
   color: var(--color-text);
   padding: 8px;
   background-color: var(--color-bg);
-  font-size: 1em - 1vw;
+  font-size: 1.2rem;
   height: 47px;
   padding-top: 12px;
   border-radius: 8px;
   margin-right: -4px;
   margin-left: -4px;
   font-size: calc(min(950px,90dvw)*0.015 - 0.15dvw + 0.45rem);
-  font-size: calc(1em - 1vw);
 }
 .blog-post h3{
   position: sticky;
@@ -307,17 +304,16 @@ body {
   color: var(--color-text);
   padding: 8px;
   background-color: var(--color-bg);
-  font-size: 0.9em;
-  font-size: calc(1em - 1vw);
+  font-size: 1rem;
   width:fit-content;
   max-width:max-content;
   padding-right: auto;
+  padding-left: calc(5 * (min(950px,90dvw)*0.015 - 0.15dvw + 0.25rem));
   align-self: end;
   margin-left:auto;
   height: 40px;
   border-radius: 8px;
   font-size: calc(min(950px,90dvw)*0.015 - 0.15dvw + 0.25rem);
-  font-size: calc(1rem - 2vw);
 }
 .blog-post pre code{
   font-family: "Inconsolata";
