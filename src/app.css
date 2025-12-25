@@ -297,7 +297,6 @@ body {
   font-size: calc(min(440px,40dvw)*0.005 + 0.02dvw + 0.05rem);
 }
 .blog-post h3{
-  position: sticky;
   left: 0px;
   top: 95px;
   z-index: 0;
