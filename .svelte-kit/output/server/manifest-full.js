@@ -1,0 +1,104 @@
+export const manifest = (() => {
+function __memo(fn) {
+	let value;
+	return () => value ??= (value = fn());
+}
+
+return {
+	appDir: "_app",
+	appPath: "_app",
+	assets: new Set([".~lock.cv.odt#","back0.webp","back1.webp","back2.webp","back3.webp","back4.webp","back5.webp","back6.webp","bck.jpeg","cv.odt","cv_andrey_golovin.pdf","fonts/cmunbx.ttf","fonts/cmunobi.ttf","fonts/cmunobx.ttf","fonts/cmunorm.ttf","fonts/cmunoti.ttf","fonts/cmunrm.ttf","fonts/cmuntb.ttf","fonts/cmunti.ttf","fonts/cmuntt.ttf","fonts/cmunui.ttf","fonts/cmunvt.ttf","me.jpg","og-image.png","robots.txt"]),
+	mimeTypes: {".webp":"image/webp",".jpeg":"image/jpeg",".pdf":"application/pdf",".ttf":"font/ttf",".jpg":"image/jpeg",".png":"image/png",".txt":"text/plain"},
+	_: {
+		client: {start:"_app/immutable/entry/start.CX8IIVdc.js",app:"_app/immutable/entry/app.CE7xcZnO.js",imports:["_app/immutable/entry/start.CX8IIVdc.js","_app/immutable/chunks/Dkjl7EFX.js","_app/immutable/chunks/LvNdeKyf.js","_app/immutable/chunks/BSTOWzBo.js","_app/immutable/chunks/BjHfPZ7_.js","_app/immutable/entry/app.CE7xcZnO.js","_app/immutable/chunks/DWzqSfxI.js","_app/immutable/chunks/LvNdeKyf.js","_app/immutable/chunks/BtzwvMBs.js","_app/immutable/chunks/DgQZ3w3Q.js","_app/immutable/chunks/C5vp_C0f.js","_app/immutable/chunks/BjHfPZ7_.js","_app/immutable/chunks/Cv-OK6qP.js","_app/immutable/chunks/CC0uOOOu.js","_app/immutable/chunks/CTrRe5wz.js"],stylesheets:[],fonts:[],uses_env_dynamic_public:false},
+		nodes: [
+			__memo(() => import('./nodes/0.js')),
+			__memo(() => import('./nodes/1.js')),
+			__memo(() => import('./nodes/2.js')),
+			__memo(() => import('./nodes/3.js')),
+			__memo(() => import('./nodes/4.js')),
+			__memo(() => import('./nodes/5.js')),
+			__memo(() => import('./nodes/6.js')),
+			__memo(() => import('./nodes/7.js')),
+			__memo(() => import('./nodes/8.js')),
+			__memo(() => import('./nodes/9.js')),
+			__memo(() => import('./nodes/10.js')),
+			__memo(() => import('./nodes/11.js'))
+		],
+		remotes: {
+			
+		},
+		routes: [
+			{
+				id: "/",
+				pattern: /^\/$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 3 },
+				endpoint: null
+			},
+			{
+				id: "/404",
+				pattern: /^\/404\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 4 },
+				endpoint: null
+			},
+			{
+				id: "/about",
+				pattern: /^\/about\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 5 },
+				endpoint: null
+			},
+			{
+				id: "/blog",
+				pattern: /^\/blog\/?$/,
+				params: [],
+				page: { layouts: [0,2,], errors: [1,,], leaf: 6 },
+				endpoint: null
+			},
+			{
+				id: "/blog/async",
+				pattern: /^\/blog\/async\/?$/,
+				params: [],
+				page: { layouts: [0,2,], errors: [1,,], leaf: 7 },
+				endpoint: null
+			},
+			{
+				id: "/blog/[slug]",
+				pattern: /^\/blog\/([^/]+?)\/?$/,
+				params: [{"name":"slug","optional":false,"rest":false,"chained":false}],
+				page: { layouts: [0,2,], errors: [1,,], leaf: 8 },
+				endpoint: null
+			},
+			{
+				id: "/contacts",
+				pattern: /^\/contacts\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 9 },
+				endpoint: null
+			},
+			{
+				id: "/gallery",
+				pattern: /^\/gallery\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 10 },
+				endpoint: null
+			},
+			{
+				id: "/projects",
+				pattern: /^\/projects\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 11 },
+				endpoint: null
+			}
+		],
+		prerendered_routes: new Set([]),
+		matchers: async () => {
+			
+			return {  };
+		},
+		server_assets: {}
+	}
+}
+})();

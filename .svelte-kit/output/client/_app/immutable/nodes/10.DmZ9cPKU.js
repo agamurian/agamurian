@@ -1,0 +1,1 @@
+import{f as n,a as e}from"../chunks/C5vp_C0f.js";import"../chunks/BbaS0uwr.js";var r=n('<section class="section"><div class="main-block"><h1 class="header">Andrey Golovin</h1> <p>Software Developer and an Artist</p> <nobr><a href="/cv_andrey_golovin.pdf">CV.PDF</a></nobr></div></section>');function i(o){var a=r();e(o,a)}export{i as component};
