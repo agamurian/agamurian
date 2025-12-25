@@ -279,6 +279,7 @@ body {
   font-size: 1em - 1vw;
   height: 48px;
   text-align:center;
+  font-size: calc(1rem - 2vw);
 }
 .blog-post h2{
   position: sticky;
@@ -296,7 +297,7 @@ body {
   margin-right: -4px;
   margin-left: -4px;
   font-size: calc(min(950px,90dvw)*0.015 - 0.15dvw + 0.45rem);
-  font-size: 1.1rem;
+  font-size: calc(1em - 1vw);
 }
 .blog-post h3{
   position: sticky;
@@ -307,7 +308,7 @@ body {
   padding: 8px;
   background-color: var(--color-bg);
   font-size: 0.9em;
-  font-size: 1em - 1vw;
+  font-size: calc(1em - 1vw);
   width:fit-content;
   max-width:max-content;
   padding-right: auto;
@@ -316,7 +317,7 @@ body {
   height: 40px;
   border-radius: 8px;
   font-size: calc(min(950px,90dvw)*0.015 - 0.15dvw + 0.25rem);
-  font-size: 1rem;
+  font-size: calc(1rem - 2vw);
 }
 .blog-post pre code{
   font-family: "Inconsolata";
