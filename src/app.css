@@ -275,7 +275,7 @@ body {
   padding: 10px 12px 6px;
   opacity: 1;
   margin: auto -4px 100px -4px;
-  font-size: calc(min(950px,90dvw)*0.025 + 0.15dvw + 0.15rem);
+  font-size: calc(min(950px,90dvw)*0.015 + 0.05dvw + 0.05rem);
   height: 48px;
   text-align:center;
 }
@@ -295,6 +295,7 @@ body {
   margin-right: -4px;
   margin-left: -4px;
   font-size: calc(min(950px,90dvw)*0.015 - 0.15dvw + 0.45rem);
+  font-size: calc(min(950px,90dvw)*0.015 + 0.05dvw + 0.05rem);
 }
 .blog-post h3{
   position: sticky;
@@ -314,6 +315,7 @@ body {
   height: 40px;
   border-radius: 8px;
   font-size: calc(min(950px,90dvw)*0.015 - 0.15dvw + 0.25rem);
+  font-size: calc(min(950px,90dvw)*0.015 + 0.05dvw + 0.05rem);
 }
 .blog-post pre code{
   font-family: "Inconsolata";
