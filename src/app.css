@@ -275,7 +275,7 @@ body {
   padding: 10px 12px 6px;
   opacity: 1;
   margin: auto -4px 100px -4px;
-  font-size: calc(min(1000px,100dvw)*0.025 + 0.1dvw + 0.095rem);
+  font-size: calc(min(1000px,100dvw)*0.02 + 0.1dvw + 0.09rem);
   height: 48px;
   text-align:center;
 }
@@ -288,7 +288,7 @@ body {
   color: var(--color-text);
   padding: 8px;
   background-color: var(--color-bg);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   height: 47px;
   padding-top: 12px;
   border-radius: 8px;
@@ -304,7 +304,7 @@ body {
   padding: 4px;
   padding-left: 2em;
   background-color: var(--color-bg);
-  font-size: 0.95rem;
+  font-size: 0.75rem;
   width:fit-content;
   padding-right: auto;
   align-self: end;
