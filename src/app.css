@@ -301,10 +301,10 @@ body {
   top: 80px;
   z-index: 3;
   color: var(--color-text);
-  padding: 4px;
+  padding: 5px;
   padding-left: 2em;
   background-color: var(--color-bg);
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   width:fit-content;
   padding-right: auto;
   align-self: end;
