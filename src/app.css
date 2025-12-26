@@ -277,6 +277,7 @@ body {
   margin: auto -4px 100px -4px;
   font-size: calc(min(1000px,100dvw)*0.025 + 0.1dvw + 0.095rem);
   height: 48px;
+  transform: scale(0.8,0.8);
   text-align:center;
 }
 .blog-post h2{
