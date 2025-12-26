@@ -302,6 +302,7 @@ body {
   z-index: 3;
   color: var(--color-text);
   padding: 4px;
+  padding-left: 2em;
   background-color: var(--color-bg);
   font-size: 0.95rem;
   width:fit-content;
