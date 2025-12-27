@@ -228,6 +228,185 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+
+
+
+.projects-post p{
+  font-family: 'Inconsolata';
+  padding: 5px;
+  gap: 50px;
+  line-height: 1.45;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 1.05rem;
+  max-width: 1000px;
+  align-self: center;
+}
+.projects-post::selection{
+  color: var(--color-primary);
+}
+.projects-post ul{
+  font-family: 'Inconsolata';
+  font-size: 1.15rem;
+}
+.projects-post li{
+  font-family: 'Inconsolata';
+  font-size: 1.15rem;
+}
+.projects-post pre{
+  background-color: #0009;
+  border: 3px solid #4448;
+  border-radius: 4.5px;
+  font-family: "Inconsolata";
+  backdrop-filter: blur(15px);
+  line-height: 1.25;
+  font-size: 1.15rem;
+}
+.projects-post h1{
+  position: sticky;
+  left: 0px;
+  top: 30px;
+  font-family: "CMU-ui";
+  font-family: 'CMU-nrm';
+  font-size: 1.4em;
+  border-bottom: 3px solid #888a;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+  z-index: 2;
+  max-width: calc(1024px);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  padding: 10px 12px 6px;
+  opacity: 1;
+  margin: auto -4px 100px -4px;
+  font-size: calc(min(1000px,100dvw)*0.02 + 0.1dvw + 0.09rem);
+  height: 48px;
+  text-align:center;
+}
+.projects-post h2{
+  position: sticky;
+  border-bottom: 3px solid #888a;
+  left: 0px;
+  top: 72px;
+  z-index: 2;
+  color: var(--color-text);
+  padding: 8px;
+  background-color: var(--color-bg);
+  font-size: 1.1rem;
+  height: 47px;
+  padding-top: 12px;
+  border-radius: 8px;
+  margin-right: -4px;
+  margin-left: -4px;
+}
+.projects-post h3{
+  position: sticky;
+  left: 0px;
+  top: 80px;
+  z-index: 2;
+  color: var(--color-text);
+  padding: 5px;
+  padding-left: 2em;
+  background-color: var(--color-bg);
+  font-size: 0.9rem;
+  width:fit-content;
+  padding-right: auto;
+  align-self: end;
+  margin-left:auto;
+  height: 30px;
+  border-radius: 8px;
+}
+.projects-post pre code{
+  font-family: "Inconsolata";
+}
+.projects-post pre code span{
+  color: #eee;
+}
+.projects-post pre code .parameter{
+  color: #eea;
+}
+
+.projects-post pre code .comment{
+  color: #89a;
+}
+.projects-post pre code .function{
+  color: #8dd;
+}
+.projects-post pre code .punctuation{
+  color: #db9;
+}
+.projects-post pre code .template-string{
+  color: #0d0;
+}
+.projects-post pre code .property{
+  color: #ff9;
+}
+.projects-post pre code .selector{
+  color: #bb7;
+}
+.projects-post pre code .keyword{
+  color: #fa8;
+}
+.projects-post pre code .constant{
+  color: #a8a;
+}
+.projects-post pre code .operator{
+  color: #f99;
+}
+.projects-post pre code .number{
+  color: #dd8;
+}
+.projects-post pre code .tag{
+  color: #8a4;
+}
+.projects-post pre code .attr-name{
+  color: #d78;
+}
+.projects-post pre code .attr-value{
+  color: #ada;
+}
+
+
+.projects-post img{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.blog-post img{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.projects-post video{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.blog-post video{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
 .blog-post p{
   font-family: 'Inconsolata';
   padding: 5px;
@@ -235,7 +414,7 @@ body {
   margin-top: 25px;
   margin-bottom: 25px;
   font-size: 1.05rem;
-  max-width: 750px;
+  max-width: 1000px;
   align-self: center;
 }
 .blog-post::selection{

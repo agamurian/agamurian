@@ -1,3 +1,14 @@
+---
+title: "Procrastinator"
+date: "2018-07-15"
+author: "Andrey Golovin"
+category: "graphics"
+tags: ["linux", "art", "python"]
+published: true
+featured: true
+excerpt: "project, an inter-medium artwork, an expirience."
+readingTime: 21
+---
 
 # Procrastinator  
 *(original name: “Questions”)*

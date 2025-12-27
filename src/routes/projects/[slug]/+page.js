@@ -3,14 +3,14 @@ import { error } from '@sveltejs/kit';
 export async function load({ params }) {
 	try {
 		// Dynamically import the markdown file
-		const post = await import(`../../../posts/${params.slug}.md`);
+		const post = await import(`../../../projects/${params.slug}.md`);
 
 		if (!post) {
 			throw error(404, 'Post not found');
 		}
 
 		// Import all posts to find related posts
-		const allPosts = import.meta.glob('../../../posts/*.md', { eager: true });
+		const allPosts = import.meta.glob('../../../projects/*.md', { eager: true });
 		const posts = Object.entries(allPosts)
 			.map(([path, module]) => {
 				const slug = path.split('/').at(-1)?.replace('.md', '');
