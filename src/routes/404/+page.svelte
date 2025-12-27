@@ -2,7 +2,7 @@
 		<div class="main-block">
 
 			<h1 class="header">404</h1>
-			<nobr><a href='/' >CV.PDF</a></nobr>
+			<nobr>No such page found</nobr>
 	</div>
 	</section>
 
