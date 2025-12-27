@@ -1,5 +1,6 @@
 	<section class="section">
 		<div class="main-block">
+			<img src="/og-image.png"/>
 			<p>Software Developer and an Artist</p>
 			<nobr><a href='/cv_andrey_golovin.pdf' >CV.PDF</a></nobr>
 	</div>

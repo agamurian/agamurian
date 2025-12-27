@@ -5,6 +5,7 @@
   <div class="border-part">
     <div class="left-part">
       <a class="item" href='/'>Main</a>
+      <a class="item" href='/about'>About</a>
       <a class="item" href='/projects'>Projects</a>
       <a class="item" href='/contacts'>Contacts</a>
       <a class="item" href='/gallery'>Gallery</a>
