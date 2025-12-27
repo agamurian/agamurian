@@ -35,7 +35,7 @@ Procedural animation was used extensively. With simple functions like sine and P
 
 ---
 
-## Media
+### Media
 
 ![Scan](../../projects/seeance/3.webp)
 ![Scan](../../projects/seeance/1.webp)

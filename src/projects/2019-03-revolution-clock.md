@@ -10,7 +10,6 @@ excerpt: "A satirical IoT device predicting social instability through internet-
 readingTime: 7
 ---
 
- h
 # Revolution Clock
 
 An IoT device for a Russian government official to maintain balance.  

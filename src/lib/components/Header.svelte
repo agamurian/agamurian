@@ -29,12 +29,10 @@
       top:0px;
       height: 30px;
       background-color: var(--color-bg);
-      opacity: 0.91;
       z-index: 4;
-      backdrop-filter: blur(5px);
     }
     .border-part {
-      max-width: 1000px;
+      max-width: 1024px;
       margin-left: auto;
       margin-right: auto;
       height: 30px;
@@ -43,6 +41,7 @@
       display: flex;
       border-bottom: 1.375px double black;
       border-bottom: 1.375px double #aaa;
+
     }
     .left-part{
       flex: 1;

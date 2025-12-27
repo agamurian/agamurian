@@ -296,7 +296,7 @@ body {
   font-size: 1.1rem;
   height: 47px;
   padding-top: 12px;
-  border-radius: 8px;
+  border-radius: 2px;
   margin-right: -4px;
   margin-left: -4px;
 }
@@ -306,15 +306,15 @@ body {
   top: 80px;
   z-index: 2;
   color: var(--color-text);
-  padding: 5px;
-  padding-left: 2em;
+  padding: 1px 1em 5px 2em;
   background-color: var(--color-bg);
-  font-size: 0.9rem;
+  font-size: 1.15rem;
   width:fit-content;
   padding-right: auto;
   align-self: end;
-  margin-left:auto;
-  height: 30px;
+  margin-left: auto;
+  height: 32px;
+  transform: scale(0.8);
   border-radius: 8px;
 }
 .projects-post pre code{
@@ -470,7 +470,7 @@ body {
   font-size: 1.1rem;
   height: 47px;
   padding-top: 12px;
-  border-radius: 8px;
+  border-radius: 2px;
   margin-right: -4px;
   margin-left: -4px;
 }
@@ -480,15 +480,15 @@ body {
   top: 80px;
   z-index: 2;
   color: var(--color-text);
-  padding: 5px;
-  padding-left: 2em;
+  padding: 1px 1em 5px 2em;
   background-color: var(--color-bg);
-  font-size: 0.9rem;
+  font-size: 1.15rem;
   width:fit-content;
   padding-right: auto;
   align-self: end;
-  margin-left:auto;
-  height: 30px;
+  margin-left: auto;
+  height: 32px;
+  transform: scale(0.8);
   border-radius: 8px;
 }
 .blog-post pre code{
