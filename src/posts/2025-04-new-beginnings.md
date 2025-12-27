@@ -22,11 +22,6 @@ readingTime: 10
 Was such a designer webiste<br/>
 <hr/>
 
-### The New Portfolio
-Is more optimized for a blog<br/>
-themed like comfortable reader theme with a little 3d effect<br/>
-<hr/>
-
 
 ### The New Portfolio
 Is more optimized for a blog<br/>
