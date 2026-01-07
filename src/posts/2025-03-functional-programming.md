@@ -28,28 +28,39 @@ The benefits:
 
 A pure function always returns the same output for the same input and has no side effects.
 ```javascript
-// ❌ IMPURE: depends on external state
-let multiplier = 2;
-function multiply(x) {
-    return x * multiplier;  // multiplier could change!
-}
+  import '../app.css';
+  import Header from '$lib/components/Header.svelte';
+  import favicon from '$lib/assets/favicon.svg';
+  import { onMount, onDestroy } from 'svelte';
+  import * as THREE from 'three';
+  import { browser } from '$app/environment';
 
-// ✅ PURE: all inputs as parameters
-function multiply(x, multiplier) {
-    return x * multiplier;
-}
+  let canvasEl = null;
+  let cleanup = () => {};
 
-// ❌ IMPURE: modifies external state
-const user = { name: 'John', age: 30 };
-function incrementAge(user) {
-    user.age++;  // mutation!
-    return user;
-}
+  // Mouse parallax
+  let mouseX = 0, mouseY = 0;
 
-// ✅ PURE: returns new object
-function incrementAge(user) {
-    return { ...user, age: user.age + 1 };
-}
+  // Safe browser-only setup
+  onMount(() => {
+    if (!browser || !canvasEl) return;
+
+    const result = initThree(canvasEl);
+    cleanup = result.cleanup;
+
+    window.addEventListener('mousemove', onMouseMove);
+  });
+
+  onDestroy(() => {
+    cleanup();
+    if (browser) window.removeEventListener('mousemove', onMouseMove);
+  });
+
+  function onMouseMove(e) {
+    // normalized [-1,1] small range
+    mouseX = (e.clientX / window.innerWidth - 0.5) * -0.8;
+    mouseY = (e.clientY / window.innerHeight - 0.5) * 0.4;
+  }
 ```
 
 ### 2. Immutability

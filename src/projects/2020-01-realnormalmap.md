@@ -18,7 +18,7 @@ The end result looks like a unique blend of photography and sculpture. It has a 
 
 ---
 
-## Gallery
+### Gallery
 
 ![Image](../../projects/normalmap/P-AGAMURA-NM-01.webp)
 ![Image](../../projects/normalmap/P-AGAMURA-NM-02.webp)

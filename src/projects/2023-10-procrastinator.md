@@ -27,7 +27,7 @@ This artwork was created during the author’s student years at the Rodchenko Ar
 
 ---
 
-## Documentation
+### Documentation
 
 ![Frame](../../projects/procrastinator/001.webp)
 ![Frame](../../projects/procrastinator/002.webp)
