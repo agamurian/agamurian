@@ -161,23 +161,22 @@ body {
 }
 
 .card {
-  max-width: 500px;
+  max-width: 100dvw;
   min-width: 250px;
   margin: auto;
   margin-top: 0;
   margin-left: 0;
-  border-radius: 7.5px;
-  padding: 15px 25px 6.5px 25px;
+  border-radius: 1.5px;
+  padding: 13px 25px 6.5px 25px;
   text-align: left;
   flex: 1;
   font-family: 'CMU-norm';
   font-family: 'CMU-Mono';
   font-family: 'Inconsolata';
   font-weight: 750;
-  background-color: #141e02c9;
-  border: 3px solid #4448;
+  background-color: #0007;
   box-sizing: border-box;
-  backdrop-filter: blur(5px);
+  mix-blend-mode: difference;
 }
 
 .card .header {

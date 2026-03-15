@@ -1,3 +1,7 @@
+<script>
+	import { RGB_PVRTC_2BPPV1_Format } from "three";
+
+</script>
 	<section class="section">
 		<div class="main-block">
 
@@ -9,13 +13,49 @@
 
 	<section class="section">
 			<div class="cards">
-				<div class="card" style="background-image: url('/back4.webp'); background-position: center; background-size: cover;">
+				<div class="card" style="background-image: url('/back1.webp'); background-position: center; background-size: cover;">
 					<h3 class="header">
-						SkillSet
+						Links
 					</h3>
 					<hr>
 					<p>
-						Python<br>
+						<a href="https://github.com/agamurian">Github</a><br/>
+						<a href="https://artstation.com/agamura" >Artstation</a><br/>
+						<a href="https://t.me/agamurian">Telegram</a><br/>
+						<a href="https://linkedin.com/in/agamura">LinkedIn</a><br/>
+					</p>
+				</div>
+				<div class="card" style="background-image: url('/back6.webp'); background-position: center; background-size:auto;">
+					<h3 class="header" >
+						Projects
+					</h3>
+					<hr>
+					<p class="keyed">
+						<a href='https://viviandelrio.com'><b>Vivian Del Rio</b></a><br/>
+						personal website<br/>
+					</p>
+					<p class="keyed">
+						<a href='/projects/2021-10-seeance'><b>Seance</b></a><br/>
+						Human Animation in natural way, for AR<br/>
+					</p>
+				</div>
+			</div>
+	</section>
+        <section class="section">
+        <div class="cards">
+				<div class="card" >
+					<h3 class="header">
+						SkillSet
+					</h3>
+          <hr>
+          <div style="display: flex; gap: 100px; padding:  15px; flex-wrap: wrap;">
+					<p>
+            Rigging<br>
+						Optimization<br>
+						Pipeline Automation<br>
+					</p>
+					<p>
+            Python<br>
 						Node<br>
 						Typescript<br>
 					</p>
@@ -35,38 +75,9 @@
 						Paper<br>
 					</p>
 				</div>
-				<div class="card" style="background-image: url('/back1.webp'); background-position: center; background-size: cover;">
-					<h3 class="header">
-						Links
-					</h3>
-					<hr>
-					<p>
-						<a href="https://github.com/agamurian">Github</a><br/>
-						<a href="/" >Artstation</a><br/>
-						<a href="/">Telegram</a><br/>
-						<a href="/">LinkedIn</a><br/>
-					</p>
 				</div>
-				<div class="card" style="background-image: url('/back6.webp'); background-position: center; background-size:auto;">
-					<h3 class="header" >
-						Projects
-					</h3>
-					<hr>
-					<p class="keyed">
-						<a href='/'><b>Vivian Del Rio</b></a><br/>
-						personal website<br/>
-					</p>
-					<p class="keyed">
-						<a href='/'><b>Simage</b></a><br/>
-						image processing program<br/>
-					</p>
-					<p class="keyed">
-						<a href='/'><b>3D XR player</b></a><br/>
-						for ...<br/>
-					</p>
-				</div>
-			</div>
-	</section>
+        </div>
+        </section>
 	<section class="section-fullsize shaded" style="" >
 	<section class="section">
 		<div class="text-block" style="mix-blend-mode: screen">
@@ -139,7 +150,6 @@
 					</p>
 				</div>
 	</section>
-	{/if}
 	<section class="section">
 		<h5 class="header" >
 				Check out the gallery:
@@ -160,4 +170,5 @@
 				</div>
 			</div>
 		</section>
+	{/if}
 
