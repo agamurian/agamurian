@@ -1,7 +1,3 @@
-<script>
-	import { RGB_PVRTC_2BPPV1_Format } from "three";
-
-</script>
 	<section class="section">
 		<div class="main-block">
 
@@ -11,44 +7,13 @@
 	</div>
 	</section>
 
-	<section class="section">
-			<div class="cards">
-				<div class="card" style="background-image: url('/back1.webp'); background-position: center; background-size: cover;">
-					<h3 class="header">
-						Links
-					</h3>
-					<hr>
-					<p>
-						<a href="https://github.com/agamurian">Github</a><br/>
-						<a href="https://artstation.com/agamura" >Artstation</a><br/>
-						<a href="https://t.me/agamurian">Telegram</a><br/>
-						<a href="https://linkedin.com/in/agamura">LinkedIn</a><br/>
-					</p>
-				</div>
-				<div class="card" style="background-image: url('/back6.webp'); background-position: center; background-size:auto;">
-					<h3 class="header" >
-						Projects
-					</h3>
-					<hr>
-					<p class="keyed">
-						<a href='https://viviandelrio.com'><b>Vivian Del Rio</b></a><br/>
-						personal website<br/>
-					</p>
-					<p class="keyed">
-						<a href='/projects/2021-10-seeance'><b>Seance</b></a><br/>
-						Human Animation in natural way, for AR<br/>
-					</p>
-				</div>
-			</div>
-	</section>
         <section class="section">
         <div class="cards">
 				<div class="card" >
-					<h3 class="header">
-						SkillSet
+					<h3>
+						SkillSet:
 					</h3>
-          <hr>
-          <div style="display: flex; gap: 100px; padding:  15px; flex-wrap: wrap;">
+          <div style="display: flex; gap: 50px; flex-wrap: wrap;">
 					<p>
             Rigging<br>
 						Optimization<br>
@@ -78,7 +43,37 @@
 				</div>
         </div>
         </section>
-	<section class="section-fullsize shaded" style="" >
+
+
+
+	<section class="section">
+			<div class="cards">
+				<div class="card" >
+					<h3>
+						Links
+					</h3>
+					<p>
+						<a href="https://github.com/agamurian">Github</a><br/>
+						<a href="https://artstation.com/agamura" >Artstation</a><br/>
+						<a href="https://t.me/agamurian">Telegram</a><br/>
+						<a href="https://linkedin.com/in/agamura">LinkedIn</a><br/>
+					</p>
+				</div>
+				<div class="card" style="background-image: url('/back6.webp'); background-position: center; background-size:auto;">
+					<h3 >
+						Projects
+					</h3>
+					<p class="keyed">
+						<a href='https://viviandelrio.com'><b>Vivian Del Rio</b></a><br/>
+						personal website<br/>
+					</p>
+					<p class="keyed">
+						<a href='/projects/2021-10-seeance'><b>Seance</b></a><br/>
+						Human Animation in natural way, for AR<br/>
+					</p>
+				</div>
+			</div>
+	</section>
 	<section class="section">
 		<div class="text-block" style="mix-blend-mode: screen">
 			<br/>
@@ -86,8 +81,7 @@
 				Who am I, exactly:
 			</h1>
 			<br/>
-			<br/>
-			<p style="font-family: CMU-nrm;">
+			<p>
 				I am a sowtware developer in multi-discliplinary realm, i do <nobr style="color:yellow">programs for artists</nobr>, expirement with modern and hot technologies, work with the frontiers<br/><br/>
 				I respect good technical rigor, aestectics and quality.
 				My Expirience lies in both frontend, gui programs, backend and even full systems.<br/><br/>
@@ -97,8 +91,7 @@
 			<br/>
 		</div>
 	</section>
-	</section>
-	{#if (false) }
+	{#if (true) }
 	<section class="section">
 			<h5 class="header" style="text-decoration: underline 1px dotted gray;">
 				Latest in the blog:

@@ -215,9 +215,6 @@
 		margin: 10px 0;
 		opacity: 0.8;
 		line-height: 1.6;
-		font-family: 'CMU-ui';
-		font-family: 'CMU-nrm';
-		font-family: 'Inconsolata';
 	}
 
 	.post-footer {
