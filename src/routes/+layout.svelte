@@ -202,25 +202,9 @@
 </svelte:head>
 
 <Header />
-<canvas class="three-bg-canvas" bind:this={canvasEl} />
+<canvas class="three-bg-canvas" bind:this={canvasEl}>
+</canvas>
 <div class="container">
   <slot />
 </div>
 
-<style>
-  :global(.three-bg-canvas) {
-    position: fixed;
-    inset: 0;
-    width: 100dvw;
-    height: 100dvh;
-    z-index: -1;
-    pointer-events: none;
-    display: block;
-    opacity: 0.3;
-  }
-
-  :global(main) {
-    position: relative;
-    z-index: 1;
-  }
-</style>
