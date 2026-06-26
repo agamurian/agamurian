@@ -6,8 +6,6 @@
     <div class="left-part">
       <a class="item" href='/'>Main</a>
       <a class="item" href='/projects'>Projects</a>
-      <a class="item" href='/gallery'>Gallery</a>
-      <a class="item" href='/blog'>Blog</a>
     </div>
     <div class="center-part">
 
