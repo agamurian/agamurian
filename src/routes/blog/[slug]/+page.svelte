@@ -3,9 +3,7 @@
 
 	export let data;
 	let y = 0;
-	let headerBig = true
-	
-	
+	let headerBig = true;
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -19,26 +17,26 @@
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
-<article class="section blog-post">
-	<div class="blog-header" style={ y-120>0 ? 'opacity:0' : 'opacity:1'}>
-		
+<article class="blog-post">
+	<div class="blog-header" style={y - 120 > 0 ? 'opacity:0' : 'opacity:1'}>
 		<div class="blog-meta">
 			<span class="author">By {data.meta.author}</span>
 			<span class="separator">•</span>
-			<time class="date">{new Date(data.meta.date).toLocaleDateString('en-US', { 
-				year: 'numeric', 
-				month: 'long', 
-				day: 'numeric' 
-			})}</time>
+			<time class="date"
+				>{new Date(data.meta.date).toLocaleDateString('en-US', {
+					year: 'numeric',
+					month: 'long',
+					day: 'numeric'
+				})}</time
+			>
 			<span class="separator">•</span>
 			<span class="reading-time">{data.meta.readingTime} min read</span>
 		</div>
-		<div class="tags" style={ y-60>0 ? 'opacity:0' : 'opacity:1'  }>
+		<div class="tags" style={y - 60 > 0 ? 'opacity:0' : 'opacity:1'}>
 			{#each data.meta.tags as tag}
 				<span class="tag">#{tag}</span>
 			{/each}
 		</div>
-
 	</div>
 
 	<div class="blog-content">
@@ -47,10 +45,10 @@
 
 	<div class="blog-footer">
 		<hr />
-			<h4>About the Author</h4>
-			<p>
-				<strong>{data.meta.author}</strong> is a software developer and digital artist 
-			</p>
+		<h4>About the Author</h4>
+		<p>
+			<strong>{data.meta.author}</strong> is a software developer and digital artist
+		</p>
 
 		<div class="post-navigation">
 			{#if data.previousPost}

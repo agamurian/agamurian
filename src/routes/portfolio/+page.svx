@@ -1,0 +1,56 @@
+
+<section>
+
+# Portfolio
+###### some examples of work from previous expirience
+<hr/>
+
+#### Klukwa Website
+<br/>
+
+<img src="/gallery/0.png" class="img" />
+
+#### Avacapo Addon
+<br/>
+
+<img src="/scr_a8.png" class="img" />
+<img src="/scr_a5.png" class="img" />
+<img src="/scr_a1.png" class="img" />
+
+</section>
+<section>
+
+#### 3d viewer
+<a href="https://github.com/agamurian/3d_viewer">
+
+##### github repo
+</a>
+<br/>
+
+
+<img src="/scr_b1.png" class="img" />
+<img src="/scr_b2.png" class="img" />
+<img src="/scr_b3.png" class="img" />
+<img src="/scr_b5.png" class="img" />
+
+</section>
+<section>
+
+#### Blender 3d Renders
+<br/>
+
+<img src="/gallery/2.webp" class="img" />
+<img src="/gallery/8.webp" class="img" />
+
+</section>
+<section>
+
+#### Unity 3d
+<br/>
+
+<img src="/gallery/1.webp" class="img" />
+<img src="/gallery/9.webp" class="img" />
+<img src="/gallery/10.webp" class="img" />
+<img src="/gallery/11.webp" class="img" />
+
+</section>

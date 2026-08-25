@@ -1,0 +1,146 @@
+
+<div class="blocks">
+
+<p class="h0">
+Hi, Its Andrey,<br/> artist and engineer.
+</p>
+
+---
+
+## <nobr>Technical Artist</nobr> | <nobr>Tools & Pipelin</nobr>e:
+<br>
+
+<div class="flex">
+<div class="cardcode">
+
+#### Summary:
+<br/>
+
+Technical Artist with 6+ years of experience building and maintaining art pipelines for game production. Strong Tool Development background across Blender, 3ds Max, and Maya, with hands-on experience automating asset conversion/validation, integrating content into custom and proprietary game engines, and mentoring junior artists. Comfortable working without off-the-shelf DCC-to-engine plugins, building tools from scratch.
+<br/>
+</div>
+
+<div class="blockcard">
+
+#### Skills:
+
+**DCC Tools & Scripting:** Python, MaxScript (pymxs), Blender (bpy), PySide2, 3ds Max, Maya
+
+**Pipeline & Engine Integration:** Custom/proprietary engine asset integration, batch conversion & validation, import/export tooling, plugins
+
+**Art Production:** Modeling, texturing, UVs, rigging, animation, shaders (HLSL, URP, GLSL)
+
+**Web/Tooling Support:** Three.js, WebGL, GLSL, Svelte, TypeScript
+
+**Other:** Documentation, cross-team collaboration (artists/designers/engineers), mentoring, hiring & reviews, R&D
+
+</div>
+</div>
+
+<div class="toright">
+<a href="/cv">
+<h6>CV with work expirience</h6>
+</a>
+</div>
+
+
+---
+
+## On this Website:
+<br/>
+
+<div class="flex">
+<div class="blockcard wsm">
+
+#### CV:
+<br/>
+
+<a href="/cv" >
+<h6>CV with work expirience</h6>
+</a>
+<br/>
+
+
+<a href="/Andrey_Golovin_CV.pdf"  class="articlelink">
+<span class="button">
+download PDF
+</span></a>
+<br/>
+<br/>
+
+</div>
+
+<div class="blockcard wsm">
+
+#### Portfolio:
+<br/>
+
+<a href="/portfolio" >
+<h6>
+per projects brief showroom
+</h6>
+</a>
+<br/>
+<a href="/Andrey_Golovin_Portfolio.pdf"  class="articlelink">
+<span class="button">
+download PDF
+</span></a>
+<br/>
+<br/>
+
+
+</div>
+
+<div class="blockcard wbg" style="width:100%;margin-left:0;">
+
+###### Featured:
+<a href="/typography" >
+<div class="cardcode" >
+
+#### Typography:
+
+Fonts and spaces
+
+<br/>
+</div>
+</a>
+</div>
+</div>
+
+
+### Latest in <a href="/blog">The Blog</a>:
+<br/>
+<div class="cardcode">
+<a href="/blog/functional_programming" class="articlelink">
+
+#### Functional Programming:
+how simple data transformation aalongeside with ddd works great
+</a>
+
+---
+
+<a href="/blog/on_new_in_python" class="articlelink">
+
+#### On new in Python:
+pattern matching, for loops instead of recurions
+</a>
+
+---
+
+<a href="/blog/picture" class="articlelink">
+
+#### Picture:
+various pictures
+</a>
+
+---
+
+<a href="/blog/on_games"class="articlelink">
+
+#### On Gamess:
+all about specific part of human endevour
+<br>
+</a>
+
+</div>
+</div>

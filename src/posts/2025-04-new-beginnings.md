@@ -1,240 +1,284 @@
 ---
-title: "New Beginnings: Why I Rewrote My Portfolio"
-date: "2025-02-20"
+title: "IA"
+date: "2025-01-15"
 author: "Andrey Golovin"
-category: "meta"
-tags: ["portfolio", "web-development", "svelte", "threejs"]
+category: "graphics"
+tags: ["image-processing", "algorithms", "python"]
 published: true
 featured: true
-excerpt: "Behind the scenes: the journey of redesigning this portfolio from scratch, lessons learned, and what's coming next."
-readingTime: 10
+excerpt: "Explore the fundamentals of digital image processing and how to apply convolutions, filters, and transformations to create stunning visual effects."
+readingTime: 12
 ---
 
-# New Beginnings: Why I Rewrote My Portfolio
-
-## The Old Portfolio
-### Was such a designer webiste<br/>
-
-Was such a designer webiste<br/>
-![Frame](../../blog/old_blog_1.png)
-![Frame](../../blog/old_blog_2.png)
-![Frame](../../blog/old_blog_3.png)
-<hr/>
-
-i decide  rewrote my webside to latest sveltekit and seperate the three component to be more free, also giving main focus to blog and projects readability
-
-## The New Portfolio
-* is mmore like a magic book, with academic style<br/>
+# Image Processing: From Theory to Practice
+# Ai mode for emacs.
+preferably in markdow file
 
 
-Is more optimized for a blog<br/>
-![Frame](../../blog/new_blog_1.png)
-![Frame](../../blog/new_blog_2.png)
-![Frame](../../blog/new_blog_3.png)
-themed like comfortable reader theme with a little 3d effect<br/>
-<br/>
+* Examine the following Python code snippet and provide a clear explanation of its functionality, including what each part does, any important concepts or techniques used, and potential outputs or behaviors.
+
+``` python
+
+import requests
+
+from .config import Config
+from .logger import log
+from .storage import Storage
+
+_model_catalog_cache: list[dict[str, str]] | None = None
+_model_enum_items_cache: list[tuple[str, str, str]] | None = None
 
 
-### How Threejs is mounted:
-```javascript
+def clear_models_cache() -> None:
+    global _model_catalog_cache
+    global _model_enum_items_cache
 
-  import '../app.css';
-  import Header from '$lib/components/Header.svelte';
-  import favicon from '$lib/assets/favicon.svg';
-  import { onMount, onDestroy } from 'svelte';
-  import * as THREE from 'three';
-  import { browser } from '$app/environment';
+    _model_catalog_cache = None
+    _model_enum_items_cache = None
 
-  let canvasEl = null;
-  let cleanup = () => {};
 
-  // Mouse parallax
-  let mouseX = 0, mouseY = 0;
+def _build_default_model_entry(model_type: str) -> dict[str, str]:
+    defaults = Config.DEFAULT_MODEL_DETAILS.get(model_type, {})
+    return {
+        "type": model_type,
+        "name": defaults.get("name", model_type.capitalize()),
+        "description": defaults.get("description", f"{model_type} model"),
+    }
 
-  // Safe browser-only setup
-  onMount(() => {
-    if (!browser || !canvasEl) return;
 
-    const result = initThree(canvasEl);
-    cleanup = result.cleanup;
+def _get_default_model_catalog(model_types: list[str] | None = None) -> list[dict[str, str]]:
+    return [_build_default_model_entry(model_type) for model_type in (model_types or Config.DEFAULT_MODELS)]
 
-    window.addEventListener('mousemove', onMouseMove);
-  });
 
-  onDestroy(() => {
-    cleanup();
-    if (browser) window.removeEventListener('mousemove', onMouseMove);
-  });
+def _prioritize_default_model(catalog: list[dict[str, str]]) -> list[dict[str, str]]:
+    preferred_type = Config.DEFAULT_MODEL_TYPE
+    preferred_index = next(
+        (index for index, model in enumerate(catalog) if model.get("type") == preferred_type),
+        None,
+    )
 
-  function onMouseMove(e) {
-    // normalized [-1,1] small range
-    mouseX = (e.clientX / window.innerWidth - 0.5) * -0.8;
-    mouseY = (e.clientY / window.innerHeight - 0.5) * 0.4;
-  }
+    if preferred_index in (None, 0):
+        return catalog
+
+    preferred_model = catalog[preferred_index]
+    return [preferred_model, *catalog[:preferred_index], *catalog[preferred_index + 1 :]]
+
+
+def _normalize_model_catalog(payload: dict) -> list[dict[str, str]]:
+    raw_model_types = payload.get("model_types", [])
+    raw_models = payload.get("models", [])
+
+    if isinstance(raw_models, list) and raw_models and all(isinstance(model, str) for model in raw_models):
+        return _get_default_model_catalog([model for model in raw_models if model])
+
+    models_by_type: dict[str, dict[str, str]] = {}
+    if isinstance(raw_models, list):
+        for raw_model in raw_models:
+            if not isinstance(raw_model, dict):
+                continue
+
+            model_type = str(raw_model.get("type", "")).strip()
+            if not model_type:
+                continue
+
+            default_entry = _build_default_model_entry(model_type)
+            models_by_type[model_type] = {
+                "type": model_type,
+                "name": str(raw_model.get("name") or default_entry["name"]),
+                "description": str(raw_model.get("description") or default_entry["description"]),
+            }
+
+    ordered_types: list[str] = []
+    if isinstance(raw_model_types, list):
+        for raw_type in raw_model_types:
+            model_type = str(raw_type).strip()
+            if model_type and model_type not in ordered_types:
+                ordered_types.append(model_type)
+
+    if not ordered_types:
+        ordered_types = list(models_by_type)
+
+    catalog: list[dict[str, str]] = []
+    seen: set[str] = set()
+
+    for model_type in ordered_types:
+        catalog.append(models_by_type.get(model_type, _build_default_model_entry(model_type)))
+        seen.add(model_type)
+
+    for model_type, model_info in models_by_type.items():
+        if model_type not in seen:
+            catalog.append(model_info)
+
+    return _prioritize_default_model(catalog or _get_default_model_catalog())
+
+
+def get_model_catalog() -> list[dict[str, str]]:
+    global _model_catalog_cache
+
+    if _model_catalog_cache is not None:
+        return _model_catalog_cache
+
+    if not Storage.api_token:
+        _model_catalog_cache = _prioritize_default_model(_get_default_model_catalog())
+        return _model_catalog_cache
+
+    payload = {"api_token": Storage.api_token}
+    log.info("Fetching model catalog from server...")
+    try:
+        response = requests.get(Config.GET_MODELS_URL, params=payload, timeout=10)
+        if response.status_code == 200:
+            log.info("Model catalog fetched successfully, models: " + ", ".join(response.json().get("model_types", [])))
+            _model_catalog_cache = _normalize_model_catalog(response.json())
+        else:
+            log.error(f"Failed to get models: {response.status_code} {response.text}")
+            _model_catalog_cache = _prioritize_default_model(_get_default_model_catalog())
+    except Exception as exc:
+        log.error(f"Failed to get models: {exc}")
+        _model_catalog_cache = _prioritize_default_model(_get_default_model_catalog())
+
+    return _model_catalog_cache
+
+
+def get_models_names() -> list[str]:
+    return [model["type"] for model in get_model_catalog()]
+
+
+def get_model_enum_items(_self, _context) -> list[tuple[str, str, str]]:
+    global _model_enum_items_cache
+
+    _model_enum_items_cache = [
+        (model["type"], model["name"], model["description"]) for model in get_model_catalog()
+    ]
+    return _model_enum_items_cache
+
+
+def get_default_model_type() -> str:
+    catalog = get_model_catalog()
+    if catalog:
+        return catalog[0]["type"]
+    return Config.DEFAULT_MODELS[0]
+
+
+def resolve_model_type(model_type: str) -> str:
+    model_names = get_models_names()
+    if model_type and model_type in model_names:
+        return model_type
+    return get_default_model_type()
+
 ```
 
-```javascript
+### Explanation of the Python Code
 
-  function initThree(canvas) {
-    let camera, scene, renderer, group, raf;
-    const NUM_CUBES = 10;
-    const SPREAD_XZ = 35;
-    const SPREAD_Y = 115;
-    const ROTATION_SPEED = 0.0;
-    const CAMERA_Z = 40;
-    const FOCAL_LENGTH = 35;
-    const cubeSize = 4.5;
+This script is designed to manage and retrieve a catalog of models, likely for use in an application or service. It utilizes caching to optimize repeated calls and incorporates logging for debugging purposes. The code is organized into several functions with specific responsibilities:
 
-    const meshes = [];
-    const edgesAll = [];
+#### Key Components and Functions
 
-    let targetCameraY = 0;
-    let currentCameraY = 0;
-    let currentCameraX = 0;
+1. **Imports and Global Variables:**
+   - `requests`: Used for making HTTP requests.
+   - Custom modules (`Config`, `logger`, `Storage`) are imported, presumably containing configuration settings, logging utilities, and storage-related functionality (e.g., API token handling).
+   - Two global variables `_model_catalog_cache` and `_model_enum_items_cache` are declared to store cached data.
 
-    function init() {
-      scene = new THREE.Scene();
+2. **Cache Clearing Function:**
+   ```python
+   def clear_models_cache() -> None:
+       global _model_catalog_cache, _model_enum_items_cache
+       _model_catalog_cache = None
+       _model_enum_items_cache = None
+   ```
+   - This function resets both caches to `None`, effectively clearing any stored model data.
 
-      // Camera with small DOF (simulate via near/far)
-      camera = new THREE.PerspectiveCamera(15, window.innerWidth / window.innerHeight, 10, 200);
-      camera.position.set(0, 0, CAMERA_Z);
-      if (typeof camera.setFocalLength === 'function') camera.setFocalLength(FOCAL_LENGTH);
+3. **Building Default Model Entry:**
+   ```python
+   def _build_default_model_entry(model_type: str) -> dict[str, str]:
+       defaults = Config.DEFAULT_MODEL_DETAILS.get(model_type, {})
+       return {
+           "type": model_type,
+           "name": defaults.get("name", model_type.capitalize()),
+           "description": defaults.get("description", f"{model_type} model"),
+       }
+   ```
+   - Constructs a dictionary representing a default model entry based on the provided `model_type`, using configuration defaults for name and description.
 
-      // Renderer
-      renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      renderer.setClearColor(0x000000, 0);
+4. **Default Model Catalog Retrieval:**
+   ```python
+   def _get_default_model_catalog(model_types: list[str] | None = None) -> list[dict[str, str]]:
+       return [_build_default_model_entry(model_type) for model_type in (model_types or Config.DEFAULT_MODELS)]
+   ```
+   - Generates a list of default model entries for the specified `model_types` or falls back to `Config.DEFAULT_MODELS`.
 
-      // Lights
-      const hemi = new THREE.HemisphereLight(0xffffff, 0x444444, 4.6);
-      scene.add(hemi);
-      const dir = new THREE.DirectionalLight(0xffffff, 0.6);
-      dir.position.set(5, 10, 7.5);
-      scene.add(dir);
+5. **Prioritizing Default Model:**
+   ```python
+   def _prioritize_default_model(catalog: list[dict[str, str]]) -> list[dict[str, str]]:
+       preferred_type = Config.DEFAULT_MODEL_TYPE
+       preferred_index = next((index for index, model in enumerate(catalog) if model.get("type") == preferred_type), None)
+       if preferred_index in (None, 0):
+           return catalog
+       return [catalog[preferred_index], *catalog[:preferred_index], *catalog[preferred_index + 1 :]]
+   ```
+   - Moves a model of `preferred_type` to the front of the catalog list if it exists.
 
-      // Group for cubes
-      group = new THREE.Group();
-      scene.add(group);
+6. **Normalizing Model Catalog:**
+   ```python
+   def _normalize_model_catalog(payload: dict) -> list[dict[str, str]]:
+       # Logic for normalizing and prioritizing models based on payload data.
+   ```
+   - Processes input `payload` to create a normalized model catalog, handling cases where models are specified by type or name.
 
-      // Cubes
-      for (let i = 0; i < NUM_CUBES; i++) {
-        const size = (0.1 + Math.random() * 0.9) * cubeSize;
-        const g = new THREE.BoxGeometry(size, size, size);
-        const m = new THREE.MeshStandardMaterial({
-          color: new THREE.Color().setHSL(Math.random() * 0.6 + 0.1, 0.6, 0.5),
-          metalness: 0.02 + Math.random() * 0.4,
-          roughness: 0.3 + Math.random() * 0.6
-        });
-        const mesh = new THREE.Mesh(g, m);
+7. **Fetching Model Catalog:**
+   ```python
+   def get_model_catalog() -> list[dict[str, str]]:
+       global _model_catalog_cache
+       if _model_catalog_cache is not None:
+           return _model_catalog_cache
 
-        mesh.position.set(
-          (Math.random() - 0.5) * SPREAD_XZ,
-          (Math.random() - 0.5) * SPREAD_Y,
-          (Math.random() - 0.5) * SPREAD_XZ
-        );
-        mesh.rotation.set(Math.random() * 2, Math.random() * 2, Math.random() * 2);
-        mesh.userData.spin = { x: (Math.random() - 0.5) * 0.4, y: (Math.random() - 0.5) * 0.4 };
+       # Logic to fetch model catalog either from cache or server.
+   ```
+   - Returns the cached model catalog if available; otherwise, attempts to retrieve it from a server using an API token.
 
-        group.add(mesh);
-        meshes.push(mesh);
+8. **Getting Model Names:**
+   ```python
+   def get_models_names() -> list[str]:
+       return [model["type"] for model in get_model_catalog()]
+   ```
+   - Extracts and returns the types of all models in the catalog.
 
-        // Outline
-        const oMat = new THREE.MeshBasicMaterial({ color: 0x282828, side: THREE.BackSide });
-        const oMesh = new THREE.Mesh(g.clone(), oMat);
-        oMesh.scale.setScalar(1.05);
-        mesh.add(oMesh);
+9. **Model Enum Items Retrieval:**
+   ```python
+   def get_model_enum_items(_self, _context) -> list[tuple[str, str, str]]:
+       global _model_enum_items_cache
+       # Logic to populate cache with model enum items.
+   ```
+   - Provides a tuple of `(type, name, description)` for each model in the catalog.
 
-        // True dashed edges
-        const eGeom = new THREE.EdgesGeometry(g);
-        const eMat = new THREE.LineDashedMaterial({
-          color: 0x343434,
-          dashSize: 0.2,
-          gapSize: 0.1,
-          linewidth: 1
-        });
-        const lines = new THREE.LineSegments(eGeom, eMat);
-        lines.computeLineDistances();
-        mesh.add(lines);
-        edgesAll.push(lines);
-      }
+10. **Default Model Type Retrieval:**
+    ```python
+    def get_default_model_type() -> str:
+        catalog = get_model_catalog()
+        if catalog:
+            return catalog[0]["type"]
+        return Config.DEFAULT_MODELS[0]
+    ```
+    - Returns the type of the first model in the catalog or defaults to the first model listed in `Config.DEFAULT_MODELS`.
 
-      if (browser) {
-        window.addEventListener('resize', onWindowResize, { passive: true });
-        window.addEventListener('scroll', onScroll, { passive: true });
-        onWindowResize();
-        onScroll();
-      }
-    }
+11. **Resolving Model Type:**
+    ```python
+    def resolve_model_type(model_type: str) -> str:
+        model_names = get_models_names()
+        if model_type and model_type in model_names:
+            return model_type
+        return get_default_model_type()
+    ```
+    - Validates a requested `model_type` against available models; returns it if valid, otherwise defaults to the system's default model type.
 
-    function onWindowResize() {
-      const w = window.innerWidth;
-      const h = window.innerHeight;
-      camera.aspect = w / h;
-      camera.updateProjectionMatrix();
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-      renderer.setSize(w, h);
-    }
+#### Summary
 
-    function onScroll() {
-      targetCameraY = -window.scrollY * 0.005;
-    }
+This script provides a comprehensive framework for managing model catalogs within an application. It includes caching mechanisms to reduce redundant API calls, logging for operational insights, and functions to normalize and prioritize model data based on configuration settings and user requests. The use of global variables for caching suggests that this module is designed for scenarios where state persistence across function calls is beneficial.
 
-    function animate(t) {
-      raf = requestAnimationFrame(animate);
-      const time = (t || performance.now()) * 0.001;
+### 
 
-      group.rotation.y += 0.0015 * (ROTATION_SPEED * 10);
-      group.rotation.x = Math.sin(time * 0.12 * ROTATION_SPEED * 10) * 0.08;
+-------------------------------------------------------------------------------
 
-      for (const m of meshes) {
-        m.rotation.x += (m.userData.spin?.x || 0) * 0.002 * (ROTATION_SPEED * 10);
-        m.rotation.y += (m.userData.spin?.y || 0) * 0.0025 * (ROTATION_SPEED * 10);
-      }
 
-      // Camera smoothing
-      const damping = 0.035;
-      currentCameraY += (targetCameraY - currentCameraY) * damping;
+hi
 
-      // Mouse parallax (subtle)
-      const parallaxAmplitude = 1.2;
-      const targetX = mouseX * parallaxAmplitude;
-      const targetY = mouseY * parallaxAmplitude;
-      currentCameraX += (targetX - currentCameraX) * damping;
-      camera.position.x = currentCameraX;
-      camera.position.y = currentCameraY + targetY;
-
-      edgesAll.forEach(l => l.material.needsUpdate = true);
-
-      renderer.render(scene, camera);
-    }
-
-    function dispose() {
-      cancelAnimationFrame(raf);
-      if (browser) {
-        window.removeEventListener('resize', onWindowResize);
-        window.removeEventListener('scroll', onScroll);
-      }
-
-      for (const m of meshes) {
-        m.traverse(child => {
-          if (child.geometry) child.geometry.dispose();
-          if (child.material) {
-            if (Array.isArray(child.material)) child.material.forEach(mat => mat.dispose());
-            else child.material.dispose();
-          }
-        });
-        if (m.parent) m.parent.remove(m);
-      }
-
-      if (renderer) {
-        renderer.dispose();
-        try { renderer.getContext()?.getExtension('WEBGL_lose_context')?.loseContext(); } catch {}
-      }
-    }
-
-    init();
-    animate();
-    return { cleanup: dispose };
-  }
-```
+Hello! How may I assist you today?

@@ -1,0 +1,67 @@
+# Theme
+###### theme support is not fully implemented yet
+
+but you can simply edit the styles/style.scss, all elements are in fact themed:
+
+<div class="cardcode">
+
+```
+theme:
+$light: #ffffff;
+$dark: #1d1d1d;
+$secondarycolor: #3a5010;
+$primarycolor: #5b6f4e;
+
+$backgroundcolor: $light;
+$frontcolor: $dark;
+$neutral: #8888;
+
+// Dark Theme:
+//$backgroundcolor: $dark;
+//$frontcolor: $light;
+
+$bordercolor: $light;
+
+$borderwifth: 2px;
+$rounded: 10px;
+
+//$sans: "Rubik";
+//$sans: "Bricolage Grotesque";
+//$sans: "Golos Text";
+$sans: "Inter";
+
+$monospace: "Ubuntu Mono";
+
+//$serif: "Libertinus Serif";
+//$serif: "P052";
+$serif: "C059";
+
+$header: $sans;
+$basefont: $serif;
+
+$factor: 1.0;
+$height: 1.5;
+$fontsizeh1: calc(35px * $factor);
+$fontsizeh2: calc(28px * $factor);
+$fontsizeh3: calc(24px * $factor);
+$fontsizeh4: calc(22px * $factor);
+$fontsizeh5: calc(20px * $factor);
+$fontsizeh6: calc(18px * $factor);
+$fontsize: calc(16px * $factor);
+
+$margin: 28px;
+$size1: 2px;
+$size2: 4px;
+$size3: 8px;
+$size4: 16px;
+$size5: 20px;
+$size6: 50px;
+$size7: 100px;
+$size8: 300px;
+
+$containerw1: 1000px;
+$containerfull: 100%;
+
+```
+
+</div>

@@ -6,7 +6,7 @@ import remarkToc from 'remark-toc';
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
-	extensions: ['.md'],
+	extensions: ['.md', '.svx'],
 	remarkPlugins: [remarkToc],
 	rehypePlugins: [rehypeSlug]
 };
@@ -17,7 +17,7 @@ const config = {
 	kit: {
 		adapter: adapter()
 	},
-	extensions: ['.svelte', '.md']
+	extensions: ['.svelte', '.md', '.svx']
 };
 
 export default config;

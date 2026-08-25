@@ -1,0 +1,23 @@
+# Andrey Golovin
+**Technical Artist — Tools & Pipeline**
+
+Belgrade, Serbia | +381 64 148 6124
+
+ag-3d@ya.ru | [linkedin.com/in/agamura](https://linkedin.com/in/agamura) | [agamurian.com](https://agamurian.com) | [@agamurian](https://t.me/agamurian)
+
+---
+
+## Cover Letter
+
+Dear Hiring Team,
+
+I'm applying for the Technical Artist role at SuperPlay.
+
+My work has consistently sat at the intersection of art, engine, and tooling — which is exactly the bridge this role asks for. I have around two years of Unity/C# development experience, shader work in HLSL and URP, and a strong pipeline-tooling background: at Wargaming, BLACKHUB Games, and AvaCapo, I built Python-based tools and plugin systems aimed at cutting manual work, catching errors before they hit a build, and speeding up asset delivery. At ChillBase, I worked mobile production specifically — validating incoming assets and troubleshooting engine integration under mobile constraints. At Immerse Lab, I handled rigging, animation setup, import/export pipelines, and shipped VR/XR features in Unity, while also owning documentation and onboarding for the art pipeline.
+
+I don't have hands-on Spine experience, and my VFX/physics-simulation work has been lighter than the shader and rigging side — worth flagging directly rather than glossing over. What I do bring solidly is the GPU optimization, tool-building, and cross-discipline collaboration this role centers on, plus real production experience shipping under performance and memory constraints.
+
+My portfolio is at agamurian.com if you'd like to see examples of the tooling and shader work directly.
+
+Best regards,
+Andrey Golovin
