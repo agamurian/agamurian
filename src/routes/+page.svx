@@ -75,7 +75,7 @@ download PDF
 #### Portfolio:
 <br/>
 
-<a href="/portfolio" >
+<a href="/projects" >
 <h6>
 per projects brief showroom
 </h6>
@@ -111,35 +111,10 @@ Fonts and spaces
 ### Latest in <a href="/blog">The Blog</a>:
 <br/>
 <div class="cardcode">
-<a href="/blog/functional_programming" class="articlelink">
+<a href="/blog/" class="articlelink">
 
 #### Functional Programming:
 how simple data transformation aalongeside with ddd works great
-</a>
-
----
-
-<a href="/blog/on_new_in_python" class="articlelink">
-
-#### On new in Python:
-pattern matching, for loops instead of recurions
-</a>
-
----
-
-<a href="/blog/picture" class="articlelink">
-
-#### Picture:
-various pictures
-</a>
-
----
-
-<a href="/blog/on_games"class="articlelink">
-
-#### On Gamess:
-all about specific part of human endevour
-<br>
 </a>
 
 </div>

@@ -40,17 +40,6 @@ Procedural animation was used extensively. With simple functions like sine and P
 ![Scan](../../projects/seeance/3.webp)
 ![Scan](../../projects/seeance/1.webp)
 
-<video src="../../projects/seeance/5.MOV" controls></video>
-<video src="../../projects/seeance/6.MOV" controls></video>
 
 ![Scan](../../projects/seeance/7.webp)
 ![Scan](../../projects/seeance/8.webp)
-
-<video src="../../projects/seeance/9.mp4" controls></video>
-<video src="../../projects/seeance/10.mp4" controls></video>
-<video src="../../projects/seeance/11.mp4" controls></video>
-<video src="../../projects/seeance/12.mp4" controls></video>
-<video src="../../projects/seeance/13.mp4" controls></video>
-<video src="../../projects/seeance/14.mp4" controls></video>
-<video src="../../projects/seeance/15.mp4" controls></video>
-<video src="../../projects/seeance/17.mp4" controls></video>
