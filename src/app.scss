@@ -741,6 +741,23 @@ blockquote {
 	text-align: justify;
 }
 
+.blog-content h2 {
+	margin-top: calc($fontsizeh2 * 2);
+	text-decoration: 2px dotted underline;
+}
+.blog-content h3 {
+	margin-top: calc($fontsizeh3 * 2);
+}
+.blog-content h4 {
+	margin-top: calc($fontsizeh4 * 2);
+}
+.blog-content h5 {
+	margin-top: calc($fontsizeh5 * 2);
+}
+.blog-content h6 {
+	margin-top: calc($fontsizeh6 * 2);
+}
+
 .blog-footer {
 	margin-top: 20px;
 	padding-top: 30px;
