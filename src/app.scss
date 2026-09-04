@@ -1,65 +1,3 @@
-@font-face {
-	font-family: 'CMU-norm';
-	src: url('/fonts/cmunbx.ttf') format('truetype');
-	font-weight: 600;
-}
-
-@font-face {
-	font-family: 'CMU-nrm';
-	src: url('/fonts/cmunrm.ttf') format('truetype');
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: 'CMU-norm';
-	src: url('/fonts/cmunorm.ttf') format('truetype');
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: 'CMU-Mono';
-	src: url('/fonts/cmuntt.ttf') format('truetype');
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: 'Mononoki';
-	src: url('/fonts/mononoki-Bold.ttf') format('truetype');
-	font-weight: 600;
-	font-variant: bold;
-}
-@font-face {
-	font-family: 'Mononoki';
-	src: url('/fonts/mononoki-Regular.ttf') format('truetype');
-	font-weight: 400;
-}
-@font-face {
-	font-family: 'Mononoki';
-	src: url('/fonts/mononoki-bold-italic.ttf') format('truetype');
-	font-weight: 600;
-	font-variant: italic;
-}
-@font-face {
-	font-family: 'GolosText';
-	src: url('/fonts/GolosText-Bold.ttf') format('truetype');
-	font-weight: 600;
-}
-@font-face {
-	font-family: 'GolosText';
-	src: url('/fonts/GolosText-Medium.ttf') format('truetype');
-	font-weight: 500;
-}
-@font-face {
-	font-family: 'GolosText';
-	src: url('/fonts/GolosText-Regular.ttf') format('truetype');
-	font-weight: 400;
-}
-@font-face {
-	font-family: 'EB';
-	src: url('/fonts/EBGaramondSC08-Regular.otf') format('opentype');
-	font-weight: 400;
-}
-
 $light: #ffffff;
 $dark: #1d1d1d;
 $secondarycolor: #719f91;
@@ -92,11 +30,11 @@ $rounded: 7.5px;
 //$sans: 'Bricolage Grotesque';
 //$sans: 'Golos Text';
 $sans: 'Inter';
-$monospace: 'Mononoki';
+$monospace: 'IBM Plex Mono';
 
 //$serif: 'Libertinus Serif';
 //$serif: 'P052';
-$serif: 'C059';
+$serif: 'IBM Plex Serif';
 
 $header: $sans;
 $basefont: $serif;
