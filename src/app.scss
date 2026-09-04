@@ -755,21 +755,26 @@ main {
 	z-index: 1;
 }
 
-ol {
+
+	ol {
 	gap: 1em;
-}
-
-ul {
-	line-height: $height;
-	font-size: $fontsize;
-	font-family: $basefont;
-	text-align: justify;
-}
-
-ul,
-ol {
+		line-height: $height;
+		font-size: $fontsize;
+		font-family: $basefont;
+		text-align: left;
+		margin-top: $fontsize;
 	margin-bottom: 18px;
-}
+	}
+
+	ul {
+	gap: 1em;
+		line-height: $height;
+		font-size: $fontsize;
+		font-family: $basefont;
+		text-align: left;
+		margin-top: $fontsize;
+	margin-bottom: 18px;
+	}
 
 li {
 	margin-bottom: 8px;
