@@ -1,3 +1,9 @@
+@font-face {
+	font-family: 'SchoolBook';
+	src: url('/fonts/Schoolbook.otf') format('opentype');
+	font-weight: 400;
+}
+
 $light: #ffffff;
 $dark: #1d1d1d;
 $secondarycolor: #719f91;
@@ -31,25 +37,22 @@ $rounded: 7.5px;
 //$sans: 'Golos Text';
 $sans: 'Inter';
 $monospace: 'IBM Plex Mono';
-
-//$serif: 'Libertinus Serif';
-//$serif: 'P052';
-$serif: 'IBM Plex Serif';
+$serif: 'SchoolBook';
 
 $header: $sans;
 $basefont: $serif;
 
-$factor: 1;
+$factor: 0.9;
 $height: 1.5;
-$fontsizeh1: calc(35px * $factor);
-$fontsizeh2: calc(28px * $factor);
-$fontsizeh3: calc(24px * $factor);
-$fontsizeh4: calc(22px * $factor);
-$fontsizeh5: calc(20px * $factor);
-$fontsizeh6: calc(18px * $factor);
-$fontsize: calc(16px * $factor);
+$fontsizeh1: calc(2rem * $factor);
+$fontsizeh2: calc(1.8rem * $factor);
+$fontsizeh3: calc(1.6rem * $factor);
+$fontsizeh4: calc(1.4rem * $factor);
+$fontsizeh5: calc(1.2rem * $factor);
+$fontsizeh6: calc(1.1rem * $factor);
+$fontsize: calc(1.1rem * $factor);
 
-$margin: 25px;
+$margin: 2rem;
 $size1: 2px;
 $size2: 4px;
 $size3: 8px;
@@ -156,10 +159,6 @@ body {
 		@media print {
 			break-inside: avoid;
 		}
-	}
-	code {
-		font-family: $monospace;
-		font-weight: 500;
 	}
 	.block {
 		margin: 0;
@@ -300,6 +299,8 @@ body {
 		padding: 2px 4px;
 		border-radius: 4px;
 		line-height: 1.5;
+    font-size: calc($factor * 0.85rem);
+    font-weight: 600;
 	}
 	.overdrop {
 		transition: 0.75s ease;
@@ -518,7 +519,7 @@ pre {
 }
 
 pre code {
-	font-family: $monospace, sans;
+	font-family: $monospace, monospce;
 	color: #e0e0e0;
 	background: transparent;
 	line-height: 1.25;
@@ -911,6 +912,7 @@ p {
 	opacity: 0.6;
 	margin-top: 12px;
 	flex-wrap: wrap;
+  font-family: $header;
 }
 
 .category {
