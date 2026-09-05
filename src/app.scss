@@ -975,7 +975,7 @@ p {
     max-width: calc( min( 100%, calc(100dvw - 6 * $margin) ) + (6 * $margin));
     margin-right: calc(-3 * $margin);
     margin-left: calc(-3 * $margin);
-    @media(max-width: calc($containerw1 + calc(6 * $margin))){
+    @media(max-width: calc($containerw1 + calc(3 * $margin))){
       margin-right: calc(0 * $margin);
       margin-left: calc(0 * $margin);
       max-width: calc( max( 100%, calc(100dvw - $margin) ) - (2 * $margin));
