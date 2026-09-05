@@ -950,3 +950,35 @@ p {
 		right: 10px;
 	}
 }
+
+	.text {
+		margin: 1rem;
+		margin-bottom: 4rem;
+		text-align: center;
+    font: $header;
+	}
+	img {
+    border-radius: 0.3rem;
+    position: relative;
+    display: flex;
+		max-height: calc(100dvh - $margin);
+    width: auto;
+    height: auto;
+		outline: none;
+		border: none;
+		display: block;
+		margin:auto;
+    display: block;
+
+    margin-top: calc( 1 * $margin);
+    margin-bottom: calc( 2 * $margin);
+    max-width: calc( min( 100%, calc(100dvw - 6 * $margin) ) + (6 * $margin));
+    margin-right: calc(-3 * $margin);
+    margin-left: calc(-3 * $margin);
+    @media(max-width: calc($containerw1 + calc(6 * $margin))){
+      margin-right: calc(0 * $margin);
+      margin-left: calc(0 * $margin);
+      max-width: calc( max( 100%, calc(100dvw - $margin) ) - (2 * $margin));
+
+    }
+	}

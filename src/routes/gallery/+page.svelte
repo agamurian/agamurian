@@ -20,22 +20,3 @@
 	<div class="text">capsule one</div>
 	<img  class='img' src="/gallery/2.webp"/>
 	<div class="text">Coffee and Orange</div>
-
-<style lang="css">
-
-	.text {
-		margin: 1rem;
-		margin-bottom: 4rem;
-		text-align: center;
-	}
-	.img {
-		max-height: calc(100dvh - 8rem);
-    max-width: 100dvw;
-    width: auto;
-		outline: none;
-		border: none;
-		display: block;
-		margin:auto;
-    display: block;
-	}
-	</style>
