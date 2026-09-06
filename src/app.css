@@ -252,34 +252,6 @@ li {
 	margin-bottom: 8px;
 }
 
-table {
-	width: 100%;
-	border-collapse: collapse;
-	margin: 20px 0;
-}
-
-th,
-td {
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	padding: 10px;
-	text-align: left;
-}
-
-th {
-	background-color: rgba(59, 130, 246, 0.1);
-	font-weight: 600;
-}
-
-.blog-header {
-	margin: -2px -4px 0px -4px;
-	padding: 4px 15px 15px 15px;
-	background-color: var(--color-bg);
-	position: sticky;
-	margin-top: -20px;
-	top: 33px;
-	z-index: 1;
-	font-size: small;
-}
 
 .header {
 	margin: 0 0 15px 0;
